@@ -1,0 +1,15 @@
+<?php
+require("config.php");
+require("model/function.php");
+require(SP_PATH."/SpeedPHP.php");
+$sys=spClass('lib_site')->find();
+define("PECMS_NAME",$sys['website']);//站点名称
+define("PECMS_CAT",$sys['siteurl']);//站点目录（尾部带/）
+define("PECMS_LOGO",$sys['logo']);//站点LOGO
+define("PECMS_COPYRIGHT",$sys['footer']);//站点底部版权信息
+define("PECMS_KEYWORD",$sys['keywords']);//通用关键词
+define("PECMS_DISC",$sys['disc']);//通用描述
+define("PECMS_STAT",$sys['tongji']);//统计代码
+define("PECMS_PRE",$spConfig['db']['prefix']);//表前缀
+spRun();
+?>
